@@ -2,7 +2,7 @@
 
 <h1>Students</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,11 +16,11 @@
       <tr>
         <td><%= student.name %></td>
         <td><%= student.age %></td>
-          <td><button type="button" class="btn btn-secondary"><%= link_to 'Show', student %></button></td>
+          <td><%= link_to 'Show', student, class: 'btn btn-secondary' %></td>
        
-         <td><button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_student_path(student) %></button></td>
+         <td><%= link_to 'Edit', edit_student_path(student), class:'btn btn-primary'%></td>
         
-         <td><button type="button" class="btn btn-success"><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+         <td><%= link_to 'Destroy', student, class:'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
     <% end %>
